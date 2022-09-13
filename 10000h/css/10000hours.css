@@ -55,6 +55,8 @@ main {
     background-position: center;
 }
 
+
+
 .title {
     position: absolute;
     width: 564px;
@@ -65,7 +67,6 @@ main {
 
 .sub-title {
     font-family: 'OTEnjoystoriesBA';
-    font-weight: 700;
     font-size: 36px;
     margin-bottom: 78px;
     color: #F5DF4D;
@@ -75,14 +76,13 @@ main {
     display: flex;
     height: 85px;
     font-size: 18px;
-    /* font-family: 'GmarketSansMedium'; */
-    line-height: 34px;
+    line-height: 2em;
     margin-bottom: 102px;
     justify-content: center;
 }
 
 .txt-desc strong {
-    font-size: 24px;
+    font-size: 24px; 
     font-family: 'GmarketSansBold';
 }
 
@@ -92,9 +92,12 @@ main {
 }
 
 .cont-inp {
-    /* font-family: 'GmarketSansMedium'; */
     font-size: 24px;
     margin-bottom: 88px;
+}
+
+.cont-inp-mobile {
+    display: none;
 }
 
 .cont-inp input {
@@ -113,6 +116,11 @@ main {
     position: relative;
 }
 
+.btn-wrap-mobile {
+    position: relative;
+    display: none;
+}
+
 .btn {
     height: 66px;
     background-color: #FCEE21;
@@ -122,11 +130,12 @@ main {
     cursor: pointer;
     border-radius: 56px;
     border: none;
-    margin-bottom: 115px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .exc {
     width: 565px;
+    margin-bottom: 147px;
 }
 
 .click {
@@ -146,10 +155,11 @@ main {
     margin-bottom: 70px;
 }
 
-.cont-footer small {
-    margin: 20px;
+.logo {
+    margin-bottom: 20px;
 }
 
+/* 추후 js기능을 연동하기 위한 주석 */
 /* .result-wrapper {
     display: none;
 } */
@@ -160,7 +170,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 117px;
+    margin-bottom: 110px;
 }
 
 .result-wannabe, .result-time {
@@ -178,6 +188,7 @@ main {
 .go {
     width: 356px;
     margin-right: 18px;
+    margin-bottom: 130px;
 }
 
 .share {
@@ -200,12 +211,212 @@ main {
 
 .cont-modal {
     display: none;
-    width: 800px;
-    height: 800px;
-    border-radius: 30px;
-    background-color: #FFFFFF; 
+}
+
+.cont-modal p {
+    color: #5B2386;
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.cont-modal p strong {
+    font-size: 96px;
+    line-height: 106px;
+}
+
+.cont-modal img {
+    width: 433px;
+    margin-bottom: 20px;
+}
+
+.exit {
+    width: 508px;
+    padding: 21px 45px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.exit-mobile {
+    display: none;
 }
 
 .cont-modal.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    padding: 76px 146px 68px 146px;
+    border-radius: 30px;
+    background-color: #FFFFFF; 
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cont-modal.inactive {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .tit-timelaw {
+        width: 267px;
+        height: 126px;
+        margin-top: 41px;
+        margin-bottom: 31px;
+        background-size: 126px;
+    }
+
+    .title {
+        width: 267px;
+    }
+
+    .sub-title {
+        font-size: 22px;
+        margin-bottom: 62px;
+    }
+
+    .txt-desc {
+        font-size: 14px;
+        line-height: 2em;
+        margin-bottom: 62px;
+    }
+
+    .txt-desc strong {
+        font-size: 14px;
+    }
+
+    .quotes {
+        width: 302px;
+        padding: 30px;
+    }
+
+    .cont-inp {
+        display: none;
+    }
+
+    .cont-inp-mobile {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+
+    .cont-inp-mobile input {
+        width: 156px;
+        height: 37px;
+        margin: 0 4px 17px 4px;
+        border-radius: 7px;
+        border: none;
+        text-align: center;
+        font-family: inherit;
+    }
+
+    .everyday {
+        margin-bottom: 19px;
+    }
+
+    .btn-wrap {
+        display: none;
+        margin-bottom: 64px;
+    }
+
+    .btn-wrap-mobile {
+        display: flex;
+    }
+
+    .btn {
+        height: 40px;
+        font-size: 14px;
+        margin-bottom: 64px;
+    }
+
+    .exc {
+        width: 241px;
+        height: 68px;
+        border-radius: 13px;
+    }
+
+    .click {
+        width: 43px;
+        right: -50px;
+        bottom: 70px;
+    }
+
+    .logo {
+        width: 91px;
+        margin-bottom: 17px;
+    }
+
+    .cont-footer {
+        font-size: 9px;
+        line-height: 13px;
+        margin-bottom: 32px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .go {
+        width: 186px;
+        margin-right: 13px;
+    }
+    
+    .share {
+        width: 92px;
+        background-color: #FFFFFF;
+        margin-right: 0;
+    }
+
+    #result {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    
+    .result-wannabe, .result-time {
+        margin-bottom: 15px;
+    }
+    
+    .result-wrapper strong {
+        font-size: 24px;
+        margin: 0 8px;
+    }
+
+    .cont-modal.active {
+        width: 330px;
+        height: 500px;
+        padding: 40px 44px;
+    }
+
+    
+    .cont-modal p {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    
+    .cont-modal p strong {
+        font-size: 64px;
+        line-height: 70px;
+    }
+
+    .heart {
+        display: none;
+    }
+    
+    .cont-modal img {
+        width: 230px;
+    }
+
+    .exit {
+        width: 241px;
+        height: 68px;
+        font-size: 14px;
+        padding: 17px 40px;
+        border-radius: 13px;
+        margin: 0;
+        white-space: pre-line;
+    }
 }
