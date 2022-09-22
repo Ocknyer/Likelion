@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+/* Component */
+body {
+    background-color: #5B2386;
+    color: white;
+    font-family: 'GmarketSansMedium';
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tit-timelaw {
+    position: relative;
+    width: 765px;
+    height: 265px;
+    margin-top: 120px;
+    margin-bottom: 46px;
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    position: absolute;
+    width: 564px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub-title {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    margin-bottom: 78px;
+    color: #F5DF4D;
+}
+
+.txt-desc {
+    display: flex;
+    height: 85px;
+    font-size: 18px;
+    line-height: 2em;
+    margin-bottom: 132px;
+    justify-content: center;
+}
+
+.txt-desc strong {
+    font-size: 24px; 
+    font-family: 'GmarketSansBold';
+}
+
+.quotes {
+    position: absolute;
+    padding-top: 13px;
+}
+
+.cont-inp {
+    font-size: 24px;
+    margin-bottom: 147px;
+}
+
+.cont-inp input {
+    width: 228px;
+    height: 57px;
+    border-radius: 7px;
+    border: none;
+    margin: 0 10px 27px 10px;
+    text-align: center;
+    font-family: inherit;
+    align-items: center;
+    font-size: 24px;
+}
+
+.cont-inp input:nth-child(2) {
+    margin-bottom: 147px;
+}
+
+.btn-wrap {
+    position: relative;
+}
+
+.btn {
+    height: 66px;
+    background-color: #FCEE21;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    color: #5B2386;
+    cursor: pointer;
+    border-radius: 56px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.exc {
+    width: 565px;
+}
+
+.click {
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+}
+
+.loading-wrapper img {
+    width: 100px;
+    animation: rotate_clock 2s linear infinite;
+}
+
+@keyframes rotate_clock {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-wrapper {
+    display: none;
+    margin-bottom: 147px;
+}
+
+.result-wrapper {
+    display: none;
+}
+
+.result-wannabe, .result-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.result-wrapper span {
+    font-family: 'GmarketSansBold';
+    font-size: 72px;
+    margin: 0 12px;
+}
+
+.result {
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 110px;
+}
+
+.go {
+    width: 356px;
+    margin-right: 18px;
+    margin-bottom: 130px;
+}
+
+.share {
+    width: 191px;
+    background-color: #FFFFFF;
+    margin-right: 0;
+}
+
+.cont-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: 'Noto Sans KR';
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 70px;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.blind {
+    position:absolute;
+    /*요소를 띄워서 주변 레이아웃에 영향을 끼치지 않도록함*/
+    width:1px;
+    height:1px;
+    /*크기를 0이 아닌 1px로 주어서 스크린리더가 읽을 수 있도록 함*/
+    clip:rect(0 0 0 0);
+    margin:-1px;
+    overflow:hidden;
+    /*눈에 보이는 부분을 제거*/
+}
+
+/* modal */
+.cont-modal {
+    display: none;
+}
+
+.cont-modal p {
+    color: #5B2386;
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.cont-modal p strong {
+    font-size: 96px;
+    line-height: 106px;
+}
+
+.cont-modal img {
+    width: 433px;
+    margin-bottom: 20px;
+}
+
+.exit {
+    width: 508px;
+    padding: 21px 45px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cont-modal.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    padding: 76px 146px 68px 146px;
+    border-radius: 30px;
+    background-color: #FFFFFF; 
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cont-modal.inactive {
+    display: none;
+}
